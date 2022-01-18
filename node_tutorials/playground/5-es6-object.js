@@ -35,10 +35,10 @@ const {label,stock,child,elem1=child.elem1,salePrice=500} = product          // 
 
 //// Object destructuring in Function
 
-const transaction = (type, {label,stock}) => {
-    console.log(stock)
+const transaction = (type, {label=0,stock=0}={}) => {
+    console.log(type,stock,label)
 }
 
-transaction('check',product)   //in method desctructuring the object be declare as variable
+transaction('order',product)   //in method desctructuring the object be declare as variable
 
 //console.log(elem1);
